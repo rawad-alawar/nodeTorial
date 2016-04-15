@@ -24,115 +24,68 @@ head
       script(src='https://oss.maxcdn.com/respond/1.4.2/respond.min.js')
 
   body
-    .blog-masthead
-      .container
-        nav.blog-nav
-          a.blog-nav-item.active(href='/home') Home
-
-          a.blog-nav-item(href='#') About
-
-          a.blog-nav-item(href='#') Helpful Links
-
+  .blog-masthead
     .container
-      .blog-header
-        h1.blog-title Node.js Tutorials from Around the Web
+      nav.blog-nav
+        a.blog-nav-item.active(href='/home') Home
 
-        p.lead.blog-description A blog dedicated to discovering and reviewing Node.js tutorials
+        a.blog-nav-item(href='#') About
 
-      .row
-        .col-sm-8.blog-main
-          .blog-post
-            h2.blog-post-title Sample blog post
+        a.blog-nav-item(href='#') Helpful Links
 
-            p.blog-post-meta
-               January 1, 2014 by
-              a(href='#') Mark
+  .container
+    .blog-header
+      h1.blog-title Node.js Tutorials from Around the Web
+
+      p.lead.blog-description A blog dedicated to discovering and reviewing Node.js tutorials
+
+    .row
+      .col-sm-8.blog-main
+        block content
           // /.blog-post
-          nav
-            ul.pager
-              li
-                a(href='#') Previous
 
-              li
-                a(href='#') Next
-        // /.blog-main
-        .col-sm-3.col-sm-offset-1.blog-sidebar
-          .sidebar-module.sidebar-module-inset
-            h4 About
 
-            p
-               Etiam porta
-              em sem malesuada magna
-                mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.
+        nav
+          ul.pager
+            li
+              a(href='#') Previous
 
-          .sidebar-module
-            h4 Archives
+            li
+              a(href='#') Next
+      // /.blog-main
+      .col-sm-3.col-sm-offset-1.blog-sidebar
+        .sidebar-module.sidebar-module-inset
+          h4 About
 
-            ol.list-unstyled
-              li
-                a(href='#') March 2014
+          p
+             Etiam porta
+            em sem malesuada magna
+              mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.
 
-              li
-                a(href='#') February 2014
 
-              li
-                a(href='#') January 2014
+        .sidebar-module
+          h4 Elsewhere
 
-              li
-                a(href='#') December 2013
+          ol.list-unstyled
+            li
+              a(href='#') GitHub
 
-              li
-                a(href='#') November 2013
+      // /.blog-sidebar
+    // /.row
+  // /.container
+  footer.blog-footer
 
-              li
-                a(href='#') October 2013
+    p
+      a(href='#') Back to top
+  //
+    Bootstrap core JavaScript
+    ==================================================
+  // Placed at the end of the document so the pages load faster
+  script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
 
-              li
-                a(href='#') September 2013
+  script.
+    window.jQuery  document.write('<script src="../../assets/js/vendor/jquery.min.js"><\\/script>')
 
-              li
-                a(href='#') August 2013
-
-              li
-                a(href='#') July 2013
-
-              li
-                a(href='#') June 2013
-
-              li
-                a(href='#') May 2013
-
-              li
-                a(href='#') April 2013
-
-          .sidebar-module
-            h4 Elsewhere
-
-            ol.list-unstyled
-              li
-                a(href='#') GitHub
-
-              li
-                a(href='#') Twitter
-
-              li
-                a(href='#') Facebook
-        // /.blog-sidebar
-      // /.row
-    // /.container
-    footer.blog-footer
-
-      p
-        a(href='#') Back to top
-    //
-      Bootstrap core JavaScript
-      ==================================================
-    // Placed at the end of the document so the pages load faster
-    script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
-
-    script.
-      window.jQuery  document.write('<script src="../../assets/js/vendor/jquery.min.js"><\\/script>')
-
-    script(src='https://getbootstrap/dist/js/bootstrap.min.js')
-    // IE10 viewport hack for Surface/desktop Windows 8 bug
-    script(src='https://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js')
+  script(src='https://getbootstrap/dist/js/bootstrap.min.js')
+  // IE10 viewport hack for Surface/desktop Windows 8 bug
+  script(src='https://getbootstrap.com/assets/js/ie10-viewport-bug-workaround.js')
