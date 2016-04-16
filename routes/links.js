@@ -8,9 +8,9 @@ router.get('/', function(req,res,next){
   var links = db.get('links')
 
   links.find({},{},function(err, links){
-    if err throw error
-    res.render('links', {
-      'links': links
-    })
+    if (err) throw error
+    res.render('links', {'links': links})
   })
 })
+
+module.exports = router;

@@ -1,3 +1,18 @@
 .blog-post-title{
   margin-top: 30;
 }
+
+
+.links-box{
+  background-color: #ededed;
+  margin:auto;
+  margin-bottom: 40;
+}
+
+p.link-title{
+  font-size: 25;
+}
+
+a.links {
+    color: #555;
+}

@@ -1,0 +1,47 @@
+extends layout
+
+block content
+  if links
+    .container
+      .row
+      .blog-header
+        .col-sm-8.blog-main
+          h1.blog-title Links
+          each link, i in links
+
+            .links-box
+                ul
+                p.link-title
+                  a.links(href="") Express Setup
+                  li Youtube:
+                    a(href="#{link.expressServerYT}")  Express Setup Intro Video
+                  li Github:
+                    a(href="#{link.expressServerGH}")  Express Setup Code
+
+
+            .links-box
+                ul
+                p.link-title
+                  a.links(href="") Basic Express Website
+                  li Youtube:
+                    a(href="#{link.expressWebsiteYT}")  Basic Express Website Intro
+                  li Github:
+                    a(href="#{link.expressWebsiteGH}")  Basic Express Website Code
+
+            .links-box
+                ul
+                p.link-title
+                  a.links(href="") User Login System
+                  li Youtube:
+                    a(href="#{link.userLoginSystemYT}")  User Login System Intro
+                  li Github:
+                    a(href="#{link.userLoginSystemGH}")  User Login System Code
+
+            .links-box
+                ul
+                p.link-title
+                  a.links(href="") Node Blog System
+                  li Youtube:
+                    a(href="#{link.nodeBlogYT}")  Node Blog System Intro
+                  li Github:
+                    a(href="#{link.nodeBlogGH}")  Node Blog System Code

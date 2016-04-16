@@ -9,7 +9,8 @@ var db = require('monk')('localhost/nodeTorial')
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
-var about = require('./routes/about')
+var about = require('./routes/about');
+var links = require('./routes/links');
 
 var app = express();
 
@@ -34,6 +35,7 @@ app.use(function(req, res, next) {
 app.use('/', routes);
 app.use('/users', users);
 app.use('/about', about)
+app.use('/links', links)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
