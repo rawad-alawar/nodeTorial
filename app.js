@@ -9,6 +9,7 @@ var db = require('monk')('localhost/nodeTorial')
 
 var routes = require('./routes/index');
 var users = require('./routes/users');
+var about = require('./routes/about')
 
 var app = express();
 
@@ -24,7 +25,7 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-//very important to make db accessible to rest of files
+//very important to make db accessible to rest of files, must be placed above app.use('/', routes)
 app.use(function(req, res, next) {
   req.db =  db;
   next();
@@ -32,12 +33,19 @@ app.use(function(req, res, next) {
 
 app.use('/', routes);
 app.use('/users', users);
+app.use('/about', about)
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
   var err = new Error('Not Found');
   err.status = 404;
   next(err);
+});
+
+app.get('/',function(req,res){
+  db.driver.admin.listDatabases(function(e,dbs){
+      res.json(dbs);
+  });
 });
 
 // error handlers

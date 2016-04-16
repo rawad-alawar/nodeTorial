@@ -1,20 +1,59 @@
 extends layout
 
 block content
-  .blog-post
-  if entries
-    each entry, i in entries
-      h2.blog-post-title #{entry.title}
+  .container
+    .blog-header
+      h1.blog-title Node.js Tutorials from Around the Web
 
-      p.blog-post-meta
-         #{entry.date} by #{entry.author}
+      p.lead.blog-description A blog dedicated to discovering and reviewing Node.js tutorials
+
+    .row
+      .col-sm-8.blog-main
+        .blog-post
+        if entries
+          each entry, i in entries
+            h2.blog-post-title #{entry.title}
+
+            p.blog-post-meta
+               #{entry.date} by #{entry.author}
 
 
-      p #{entry.body}
+            p #{entry.body}
 
-      p Related Links
-        ul
-          li Youtube:
-            a(href="#{entry.videoLink}")  Simple Web Server
-          li Github:
-            a(href="#{entry.githubLink}")  Tutorial Code
+            p Related Links
+              ul
+                li Youtube:
+                  a(href="#{entry.videoLink}")  Simple Web Server
+                li Github:
+                  a(href="#{entry.githubLink}")  Tutorial Code
+
+          nav
+            ul.pager
+              li
+                a(href='#') Previous
+
+              li
+                a(href='#') Next
+      // /.blog-main
+      .col-sm-3.col-sm-offset-1.blog-sidebar
+        .sidebar-module.sidebar-module-inset
+          h4 About
+
+          p
+             Etiam porta
+            em sem malesuada magna
+              mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.
+
+
+        .sidebar-module
+          h4 Elsewhere
+
+          ol.list-unstyled
+            li
+              a(href='#') GitHub
+
+
+      footer.blog-footer
+
+        p
+        a(href='#') Back to top

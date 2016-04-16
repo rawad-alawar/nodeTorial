@@ -33,54 +33,13 @@ head
         a.blog-nav-item(href='/about') About
 
         a.blog-nav-item(href='links') Helpful Links
+  block content
 
-  .container
-    .blog-header
-      h1.blog-title Node.js Tutorials from Around the Web
-
-      p.lead.blog-description A blog dedicated to discovering and reviewing Node.js tutorials
-
-    .row
-      .col-sm-8.blog-main
-        block content
-          // /.blog-post
+      
 
 
-        nav
-          ul.pager
-            li
-              a(href='#') Previous
-
-            li
-              a(href='#') Next
-      // /.blog-main
-      .col-sm-3.col-sm-offset-1.blog-sidebar
-        .sidebar-module.sidebar-module-inset
-          h4 About
-
-          p
-             Etiam porta
-            em sem malesuada magna
-              mollis euismod. Cras mattis consectetur purus sit amet fermentum. Aenean lacinia bibendum nulla sed consectetur.
 
 
-        .sidebar-module
-          h4 Elsewhere
-
-          ol.list-unstyled
-            li
-              a(href='#') GitHub
-
-      // /.blog-sidebar
-    // /.row
-  // /.container
-  footer.blog-footer
-
-    p
-      a(href='#') Back to top
-  //
-    Bootstrap core JavaScript
-    ==================================================
   // Placed at the end of the document so the pages load faster
   script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
 
