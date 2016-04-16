@@ -8,7 +8,7 @@ var mongo = require('mongodb')
 var db = require('monk')('localhost/nodeTorial')
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
+var blogpage = require('./routes/blogpage');
 var about = require('./routes/about');
 var links = require('./routes/links');
 
@@ -33,7 +33,7 @@ app.use(function(req, res, next) {
 });
 
 app.use('/', routes);
-app.use('/users', users);
+app.use('/blogpage', blogpage);
 app.use('/about', about)
 app.use('/links', links)
 
