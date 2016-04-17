@@ -15,7 +15,7 @@ router.get('/', function(req, res, next) {
 
   entries.find({},{},function(err, entries){
     if (err) throw err
-    res.render('index', {'entries': entries})
+    res.render('index', {'entries': entries, 'nav':'home'})
   })
 });
 

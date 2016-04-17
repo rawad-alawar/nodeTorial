@@ -12,6 +12,7 @@ head
 
     link(rel='icon', href='../../favicon.ico')
 
+
     title nodeTorials
     // Bootstrap core CSS
     link(href='https://getbootstrap.com/dist/css/bootstrap.min.css', rel='stylesheet')
@@ -28,11 +29,12 @@ head
   .blog-masthead
     .container
       nav.blog-nav
-        a.blog-nav-item.active(href='/home') Home
 
-        a.blog-nav-item(href='/about') About
+        a(href='/home' class=('#{nav}'=='home'? 'blog-nav-item active':'blog-nav-item')) Home
 
-        a.blog-nav-item(href='/links') Helpful Links
+        a(href='/about' class=('#{nav}'=='about'? 'blog-nav-item active':'blog-nav-item')) About
+
+        a(href='/links' class=('#{nav}'=='links'? 'blog-nav-item active':'blog-nav-item')) Helpful Links
   block content
 
 
@@ -42,6 +44,7 @@ head
 
   // Placed at the end of the document so the pages load faster
   script(src='https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js')
+
 
   script.
     window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\\/script>')

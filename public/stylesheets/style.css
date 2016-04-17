@@ -16,3 +16,20 @@ p.link-title{
 a.links {
     color: #555;
 }
+
+a.mas {
+  display: inline;;
+  width: 80px;
+  background: #ededed;
+  color: #404137;
+  padding: 8px;
+  margin-top: 40px;
+}
+
+iframe{
+  padding: 10px;
+}
+
+.blogpageside{
+  margin-top: 40px;
+}

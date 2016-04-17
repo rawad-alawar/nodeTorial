@@ -44,11 +44,17 @@ app.use(function(req, res, next) {
   next(err);
 });
 
+app.locals.truncateText = function(text, length){
+  var truncatedText = text.substring(0, length)
+  return truncatedText
+}
+
 app.get('/',function(req,res){
   db.driver.admin.listDatabases(function(e,dbs){
       res.json(dbs);
   });
 });
+
 
 // error handlers
 

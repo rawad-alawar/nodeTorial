@@ -9,7 +9,7 @@ router.get('/', function(req,res,next){
 
   links.find({},{},function(err, links){
     if (err) throw error
-    res.render('links', {'links': links})
+    res.render('links', {'links': links,'nav':'links'})
   })
 })
 
