@@ -12,6 +12,7 @@ block content
         .blog-post
         if entries
           each entry, i in entries
+          
             h2.blog-post-title #{entry.title}
 
             p.blog-post-meta #{entry.date} by #{entry.author}
@@ -20,7 +21,8 @@ block content
 
             !=truncateText(entry.body, 200)
 
-
+            br
+            br
             a.mas(href='/blogpage/#{entry._id}') Read More
 
           nav
