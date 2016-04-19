@@ -15,7 +15,7 @@ block content
           
             h2.blog-post-title #{entry.title}
 
-            p.blog-post-meta #{entry.date} by #{entry.author}
+            p.blog-post-meta #{entry.date} by #{entry.author}&nbsp&nbsp&nbsp&nbsp  Difficulty: #{entry.difficulty}        
 
 
 
@@ -23,7 +23,7 @@ block content
 
             br
             br
-            a.mas(href='/blogpage/#{entry._id}') Read More
+            a.mas(href='/blogpage/#{entry._id}') Read More 
 
           nav
             ul.pager
@@ -48,7 +48,7 @@ block content
 
           ol.list-unstyled
             li
-              a(href='#') GitHub
+              a(href='https://github.com/rawad-alawar?tab=repositories') GitHub
 
 
     footer.blog-footer

@@ -10,7 +10,7 @@ block content
 
             p.blog-post-meta #{entries.date} by #{entries.author}
               
-              iframe(width='560', height='315', src='https://www.youtube.com/embed/-SseYPQggYs?list=PLO-hrPk0zuI18xlF_480s6UiaGD7hBqJa', frameborder='0', allowfullscreen='')
+              iframe(width='560', height='315', src='#{entries.videoLink}', frameborder='0', allowfullscreen='')
 
               p #{entries.body}
 
