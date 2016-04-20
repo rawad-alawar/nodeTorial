@@ -4,7 +4,7 @@ var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var mongo = require('mongodb')
-var db = require('monk')(process.env.MONGODB_URI)
+var db = require('monk')(process.env.MY_MONGO_URI)
 
 var routes = require('./routes/index');
 var blogpage = require('./routes/blogpage');
