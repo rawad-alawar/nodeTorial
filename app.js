@@ -42,6 +42,7 @@ var linksSchema = new mongoose.Schema({
 	"nodeBlogGH" : String
 })
 
+
 var Links = mongoose.model('links',linksSchema)
 var Blog = mongoose.model('blogs', blogsSchema)
 
