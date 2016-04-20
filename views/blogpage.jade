@@ -6,20 +6,20 @@ block content
       .col-sm-8.blog-main
         .blog-post
 
-            h2.blog-post-title #{entries.title}
+            h2.blog-post-title #{blog.title}
 
-            p.blog-post-meta #{entries.date} by #{entries.author}
+            p.blog-post-meta #{blog.date} by #{blog.author}
               
-              iframe(width='560', height='315', src='#{entries.videoLink}', frameborder='0', allowfullscreen='')
+              iframe(width='560', height='315', src='#{blog.videoLink}', frameborder='0', allowfullscreen='')
 
-              p #{entries.body}
+              p #{blog.body}
 
             p Related Links
               ul
                 li Youtube:
-                  a(href="#{entries.videoLink}")  Simple Web Server
+                  a(href="#{blog.videoLink}")  Simple Web Server
                 li Github:
-                  a(href="#{entries.githubLink}")  Tutorial Code
+                  a(href="#{blog.githubLink}")  Tutorial Code
 
 
 
