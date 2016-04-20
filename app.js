@@ -15,7 +15,7 @@ var links = require('./routes/links');
 var app = express();
 //Lets connect to our database using the DB server URL.
 var uristring =
-    process.env.MONGOLAB_URI ||
+    process.env.MONGODB_URI ||
     process.env.MONGOHQ_URL ||
     'mongodb://localhost/nodeTorialxxx';
 
