@@ -8,7 +8,7 @@ router.get('/', function(req,res,next){
 
   mongoose.model('links').find(function(err, link){
     res.render('links', {'links': link, 'nav': 'links'})
-    console.log(link)
+    
 
   })
   // var db = req.db
