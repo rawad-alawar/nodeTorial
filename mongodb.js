@@ -35,7 +35,7 @@ MongoClient.connect(url, function (err, db) {
 	"body" : "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam volutpat porttitor tincidunt. Mauris eget eros sollicitudin, ullamcorper arcu non, ornare neque. Integer sit amet commodo mauris, ut suscipit elit. Vestibulum arcu leo, malesuada porta blandit ut, condimentum et velit. Donec congue, mi in laoreet varius, odio ve",
 	"date" : "April 13, 2016",
 	"videoLink" : "https://www.youtube.com/embed/pk3--qhXwLc?list=PLO-hrPk0zuI18xlF_480s6UiaGD7hBqJa",
-	"githubLink" : ""
+	"githubLink" : "https://github.com/marley-nodejs/Learn-Nodejs-by-building-10-projects/tree/master/03_Basic_Express_Website/express-website"
 }
 
   collection.insert([blog1, blog2], funciton(err, result){
